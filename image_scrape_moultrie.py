@@ -39,7 +39,6 @@ while page_counter <= 88:
             except Exception as e:
                 print(f"Error downloading {url}: {e}")
 
-    # Try clicking the new "Next Page" button
     try:
         next_button = driver.find_element(By.CSS_SELECTOR, "a[title='Go to Next Page']")
         next_button.click()
