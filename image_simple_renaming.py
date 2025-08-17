@@ -7,7 +7,7 @@ files = [f for f in os.listdir(source_folder) if os.path.isfile(os.path.join(sou
 files.sort()
 
 processed = 0
-max_images = 100
+max_images = 10000
 
 for i, filename in enumerate(files, 1):
     if processed >= max_images:
