@@ -35,7 +35,18 @@ for file in os.listdir(labels_folder):
     if not file.endswith(".txt"):
         continue
 
+    if "_" not in file:
+        print("Skipping (already updated): ", file)
+        continue
+
     file_name = file[-8:-4]
+
+    if file_name not in res or len(res[file_name]) == 0:
+        file_path = os.path.join(labels_folder, file)
+        os.remove(file_path)
+        print("Deleted (no matching ID):", file)
+        continue
+
     new_name = res[file_name][0] + ".txt"
 
     old_path = os.path.join(labels_folder, file)
