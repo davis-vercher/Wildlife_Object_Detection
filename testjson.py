@@ -3,7 +3,7 @@ from collections import defaultdict
 import os
 
 tasks_file = r"C:\Users\Personal\Documents\Wildlife Object Detection Project 2025-2026\tasks.json"
-labels_folder = r"C:\Users\Personal\Documents\Wildlife_Object_Detection\yolov8_7Mar26\labels"
+labels_folder = r"C:\Users\Personal\Documents\Wildlife Object Detection Project 2025-2026\Archive\project-1-at-2026-03-01-12-41-76bc6933\labels"
 
 # Load the JSON file
 with open(tasks_file, "r") as f:
@@ -13,10 +13,10 @@ with open(tasks_file, "r") as f:
 # Creating hashmap to store correctly formated task ID with corresponding .jpg image file
 res = defaultdict(list)
 
-for task in tasks[:10]:
+for task in tasks:
     raw_task_id = str(task["id"])
     if len(raw_task_id) == 4:
-        continue
+        task_id = str(raw_task_id)
     elif len(raw_task_id) == 3:
         task_id = str("0" + raw_task_id)
     elif len(raw_task_id) == 2:
@@ -28,13 +28,15 @@ for task in tasks[:10]:
     
     res[task_id].append(image_name)
 
-#print(res)
 
 # Process every label file
-for file in os.listdir(labels_folder):
+for file in os.listdir(labels_folder)[:10]:
 
     if not file.endswith(".txt"):
         continue
 
+    file_name = file[-8:-4]
     
+    new_name = res[file_name]
 
+    print(file_name), print(new_name)
