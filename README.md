@@ -2,46 +2,27 @@
 
 ## 1. Project Overview
 #### 1A. Purpose
-Develop a property wildlife management wildlife computer vision (CV) object detection & alerting system.
+Create a computer vision (CV) model that accurately detects wild hogs in a live video feed. This model will be used in a robotics platform that will automatically aim and "fire" a laser aiming device at the hog.
 
 #### 1B. Description
-Create a networked system of cameras (like trail cameras) for a hunting/farm property manager to use to detect what wildlife is on their property.
+Create a CV model that can accurately detect wild hogs while accurately avoiding visually similar animals (i.e., Whitetail Deer, large dogs).
 
 #### 1C. Goals
-- Improve on Finding_Feral_Hogs
-- Create commercially viable object detection for trail cameras
+- Create a model that can succesfully identify wild hogs while successfully avoid false positive identification on deer, dogs, people, etc.
+- Create a model that is usable on an edge robotics laser aiming system
+- Create functionality where the model can also predict how lethal a simulated rifle round (laser) would be if fired at a specific point on the hog // accounting for foliage occlusion, round placement, etc.
 
 #### 1D. MVP (Phase 0)
-1 camera that does object detection for following animal species:
-- Cows
-- Wild Pigs
-- Coyotes
-- Whitetails
-- Dogs
-- Bobcats
+Use an out of the box (OOTB) yolo model without training on a set of annotated wild hog images.
+- Record results (investigation needed into learning proper ML model results reporting - i.e., AUC/ROC curve, TP FP TN FN matrix, etc.)
 
-1 box, mounted on t-post, with solar, batteries, and box containing camera and compute hardware
+#### 1E. Phase 1
+Create an annotated image dataset of wild hog images (~1,000) using label-studio.
+- Setup label-studio to pull from GCP bucket of raw images
+- Annotate using label-studio (needs investigation in bounding boxes vs AI-augmented shape outline annotation)
+- Export in-stream annotations to second GCP bucket
+- Train yolo model on wild hog dataset
+-Compare results of trained model to MVP/Phase 0 model
 
-Ability to get alerts remotely and see images (more investigation needed to get this done)
-
-See video for inspiration: [Luke Ditria, Raspberry Pi Powered AI Wildlife Monitoring System!](https://www.youtube.com/watch?v=Cd_yplR1hcI)
-
-
-#### 1E. Add-Ons (Phase 1+)
-- Central property hub (for the actual object detection, so not at edge (makes cameras cheaper and also usable as basic trail cam))... revisit later on, edge might be better
-- Property hub connects to outlying cameras somehow
-- Dedicated web/mobile app
-- Build-out motion trigger camera (not video) - like trail cameras
-
-
-#### 1F. Other miscellaneous ideas
-- Convert into remote cattle management system - integrate with SmoothAg (animal detection layered onto their UGV system to identify predators near herd)
-- People/trespasser detection
-- Drone integration, auto deploy to investigate/track detected wildlife/people
-
-
-
-
-
-## 2. Technology Overview
-TBD
+#### 1F. Phase 2
+Document results and process in report/paper or video capture
