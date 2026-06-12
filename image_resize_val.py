@@ -1,7 +1,7 @@
 from PIL import Image
 import os
 
-input_folder = r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\small_imageset_500_deer_hog_coyote\deer"
+input_folder = r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\small_imageset_500_deer_hog_coyote\coyote_resized"
 
 unique_sizes = set()
 
