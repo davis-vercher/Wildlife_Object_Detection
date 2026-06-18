@@ -1,0 +1,14 @@
+Steps for getting label-studio activated on local machine for annotation with local files
+
+(1) Use Windows Command Prompt to activate the env built for running label-studio
+labelstudio-env\Scripts\activate
+
+(2) Set local file use to 'true'
+set LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED=true
+
+(3) Set the root directory to the parent folder of the YOLO files & labels folders
+"Example Below"
+set LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection
+
+(3) Launch label-studio
+label-studio

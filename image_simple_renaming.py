@@ -1,6 +1,6 @@
 import os
 
-source_folder = r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\small_imageset_500_deer_hog_coyote\coyote"
+source_folder = r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\small_imageset\deer"
 
 files = [f for f in os.listdir(source_folder) if os.path.isfile(os.path.join(source_folder, f))]
 
