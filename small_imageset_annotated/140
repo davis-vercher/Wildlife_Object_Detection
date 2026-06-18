@@ -1,0 +1,151 @@
+{
+  "id": 140,
+  "result": [
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 14.68595,
+        "y": 68.814,
+        "width": 19.118299999999998,
+        "height": 20.400399999999998,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Hog"
+        ]
+      },
+      "id": "v7Qt9NTm59",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "prediction-changed"
+    },
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 66.173985,
+        "y": 69.13374999999999,
+        "width": 9.61243,
+        "height": 19.2859,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Hog"
+        ]
+      },
+      "id": "VKgM8Af76Z",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "prediction-changed"
+    },
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 39.999300000000005,
+        "y": 73.62329999999999,
+        "width": 21.5058,
+        "height": 15.864,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Hog"
+        ]
+      },
+      "id": "T_bgUvcRuY",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "prediction-changed"
+    },
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 0.017230000000000023,
+        "y": 77.81710000000001,
+        "width": 3.91008,
+        "height": 15.5886,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Hog"
+        ]
+      },
+      "id": "p6NtPIwcN5",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "prediction-changed"
+    },
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 8.821965,
+        "y": 58.27775,
+        "width": 9.13647,
+        "height": 10.5283,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Hog"
+        ]
+      },
+      "id": "0hsTg2q-Gz",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "prediction-changed"
+    }
+  ],
+  "created_username": " davisvercher@outlook.com, 1",
+  "created_ago": "0\u00a0minutes",
+  "completed_by": {
+    "id": 1,
+    "first_name": "",
+    "last_name": "",
+    "email": "davisvercher@outlook.com"
+  },
+  "task": {
+    "id": 3624,
+    "data": {
+      "image": "/data/local-files/?d=images%5C0361.jpg"
+    },
+    "meta": {},
+    "created_at": "2026-06-18T17:54:45.890603Z",
+    "updated_at": "2026-06-18T17:54:45.890603Z",
+    "is_labeled": true,
+    "allow_skip": true,
+    "overlap": 1,
+    "inner_id": 3624,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "precomputed_agreement": null,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 1,
+    "updated_by": null,
+    "file_upload": 1,
+    "comment_authors": []
+  },
+  "was_cancelled": false,
+  "ground_truth": false,
+  "created_at": "2026-06-18T18:13:04.440896Z",
+  "updated_at": "2026-06-18T18:13:04.440896Z",
+  "draft_created_at": "2026-06-18T18:12:59.199497Z",
+  "lead_time": 12.545,
+  "import_id": null,
+  "last_action": null,
+  "bulk_created": false,
+  "project": 1,
+  "updated_by": 1,
+  "parent_prediction": 361,
+  "parent_annotation": null,
+  "last_created_by": null
+}

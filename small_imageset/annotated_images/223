@@ -1,0 +1,131 @@
+{
+  "id": 223,
+  "result": [
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 60.86248982912939,
+        "y": 45.298797577072605,
+        "width": 4.39381611065906,
+        "height": 12.00614772624536,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Hog"
+        ]
+      },
+      "id": "IXVBPYVs-P",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "manual"
+    },
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 44.10089503661514,
+        "y": 48.625802368682756,
+        "width": 10.008136696501225,
+        "height": 8.389838170147371,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Hog"
+        ]
+      },
+      "id": "Y00pwgNK_a",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "manual"
+    },
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 7.973962571196089,
+        "y": 43.41831660790164,
+        "width": 10.252237591537813,
+        "height": 12.006147726245315,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Hog"
+        ]
+      },
+      "id": "7tygSZe_L8",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "manual"
+    },
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 16.19202603742881,
+        "y": 44.72018804809693,
+        "width": 6.75345809601302,
+        "height": 10.27031913931831,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Hog"
+        ]
+      },
+      "id": "i8pvBcx9eI",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "manual"
+    }
+  ],
+  "created_username": " davisvercher@outlook.com, 1",
+  "created_ago": "2\u00a0hours, 9\u00a0minutes",
+  "completed_by": {
+    "id": 1,
+    "first_name": "",
+    "last_name": "",
+    "email": "davisvercher@outlook.com"
+  },
+  "task": {
+    "id": 3541,
+    "data": {
+      "image": "/data/local-files/?d=images%5C0278.jpg"
+    },
+    "meta": {},
+    "created_at": "2026-06-18T17:54:45.888103Z",
+    "updated_at": "2026-06-18T18:56:13.554813Z",
+    "is_labeled": true,
+    "allow_skip": true,
+    "overlap": 1,
+    "inner_id": 3541,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "precomputed_agreement": null,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 1,
+    "updated_by": 1,
+    "file_upload": 1,
+    "comment_authors": []
+  },
+  "was_cancelled": false,
+  "ground_truth": false,
+  "created_at": "2026-06-18T18:56:13.532255Z",
+  "updated_at": "2026-06-18T18:56:13.532255Z",
+  "draft_created_at": "2026-06-18T18:56:05.111087Z",
+  "lead_time": 16.82,
+  "import_id": null,
+  "last_action": null,
+  "bulk_created": false,
+  "project": 1,
+  "updated_by": 1,
+  "parent_prediction": 278,
+  "parent_annotation": null,
+  "last_created_by": null
+}

@@ -8,7 +8,7 @@ set LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED=true
 
 (3) Set the root directory to the parent folder of the YOLO files & labels folders
 "Example Below"
-set LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection
+set LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\small_imageset
 
 (3) Launch label-studio
 label-studio
