@@ -1,0 +1,71 @@
+{
+  "id": 476,
+  "result": [
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 15.215622457282352,
+        "y": 57.59425006780581,
+        "width": 20.260374288039053,
+        "height": 28.062562155320485,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Coyote"
+        ]
+      },
+      "id": "s7HCukyTNc",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "manual"
+    }
+  ],
+  "created_username": " davisvercher@outlook.com, 1",
+  "created_ago": "3\u00a0hours, 4\u00a0minutes",
+  "completed_by": {
+    "id": 1,
+    "first_name": "",
+    "last_name": "",
+    "email": "davisvercher@outlook.com"
+  },
+  "task": {
+    "id": 3288,
+    "data": {
+      "image": "/data/local-files/?d=images%5C0025.jpg"
+    },
+    "meta": {},
+    "created_at": "2026-06-18T17:54:45.752604Z",
+    "updated_at": "2026-06-18T23:23:21.796664Z",
+    "is_labeled": true,
+    "allow_skip": true,
+    "overlap": 1,
+    "inner_id": 3288,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "precomputed_agreement": null,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 1,
+    "updated_by": 1,
+    "file_upload": 1,
+    "comment_authors": []
+  },
+  "was_cancelled": false,
+  "ground_truth": false,
+  "created_at": "2026-06-18T23:23:21.772127Z",
+  "updated_at": "2026-06-18T23:23:21.772127Z",
+  "draft_created_at": null,
+  "lead_time": 4.169,
+  "import_id": null,
+  "last_action": null,
+  "bulk_created": false,
+  "project": 1,
+  "updated_by": 1,
+  "parent_prediction": 25,
+  "parent_annotation": null,
+  "last_created_by": null
+}

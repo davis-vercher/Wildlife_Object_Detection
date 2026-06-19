@@ -1,0 +1,91 @@
+{
+  "id": 196,
+  "result": [
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 77.46135069161915,
+        "y": 60.34264533044018,
+        "width": 20.42310821806336,
+        "height": 24.446252599222383,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Hog"
+        ]
+      },
+      "id": "SOpZFDms0K",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "manual"
+    },
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 25.467860048820178,
+        "y": 69.0217882650755,
+        "width": 21.887713588283138,
+        "height": 18.6601573094656,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Hog"
+        ]
+      },
+      "id": "uYTfkdjsZO",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "manual"
+    }
+  ],
+  "created_username": " davisvercher@outlook.com, 1",
+  "created_ago": "7\u00a0hours, 57\u00a0minutes",
+  "completed_by": {
+    "id": 1,
+    "first_name": "",
+    "last_name": "",
+    "email": "davisvercher@outlook.com"
+  },
+  "task": {
+    "id": 3568,
+    "data": {
+      "image": "/data/local-files/?d=images%5C0305.jpg"
+    },
+    "meta": {},
+    "created_at": "2026-06-18T17:54:45.888604Z",
+    "updated_at": "2026-06-18T18:30:18.188816Z",
+    "is_labeled": true,
+    "allow_skip": true,
+    "overlap": 1,
+    "inner_id": 3568,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "precomputed_agreement": null,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 1,
+    "updated_by": 1,
+    "file_upload": 1,
+    "comment_authors": []
+  },
+  "was_cancelled": false,
+  "ground_truth": false,
+  "created_at": "2026-06-18T18:30:18.166060Z",
+  "updated_at": "2026-06-18T18:30:18.166060Z",
+  "draft_created_at": "2026-06-18T18:30:15.282327Z",
+  "lead_time": 13.199,
+  "import_id": null,
+  "last_action": null,
+  "bulk_created": false,
+  "project": 1,
+  "updated_by": 1,
+  "parent_prediction": 305,
+  "parent_annotation": null,
+  "last_created_by": null
+}
