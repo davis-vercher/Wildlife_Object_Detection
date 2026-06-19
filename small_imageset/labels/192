@@ -1,0 +1,111 @@
+{
+  "id": 192,
+  "result": [
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 0.011049999999999949,
+        "y": 62.84755,
+        "width": 15.7226,
+        "height": 30.106500000000004,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Hog"
+        ]
+      },
+      "id": "SW9A0QgbvM",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "prediction-changed"
+    },
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 14.845849999999999,
+        "y": 58.53755,
+        "width": 11.675699999999999,
+        "height": 25.3525,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Hog"
+        ]
+      },
+      "id": "Mn4wkLMWlx",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "prediction-changed"
+    },
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 58.340113913751026,
+        "y": 67.43061206039236,
+        "width": 12.286411716842963,
+        "height": 25.748124039417775,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Hog"
+        ]
+      },
+      "id": "wpYI9IsirJ",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "manual"
+    }
+  ],
+  "created_username": " davisvercher@outlook.com, 1",
+  "created_ago": "7\u00a0hours, 23\u00a0minutes",
+  "completed_by": {
+    "id": 1,
+    "first_name": "",
+    "last_name": "",
+    "email": "davisvercher@outlook.com"
+  },
+  "task": {
+    "id": 3572,
+    "data": {
+      "image": "/data/local-files/?d=images%5C0309.jpg"
+    },
+    "meta": {},
+    "created_at": "2026-06-18T17:54:45.888604Z",
+    "updated_at": "2026-06-18T18:29:25.027392Z",
+    "is_labeled": true,
+    "allow_skip": true,
+    "overlap": 1,
+    "inner_id": 3572,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "precomputed_agreement": null,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 1,
+    "updated_by": 1,
+    "file_upload": 1,
+    "comment_authors": []
+  },
+  "was_cancelled": false,
+  "ground_truth": false,
+  "created_at": "2026-06-18T18:29:25.005167Z",
+  "updated_at": "2026-06-18T18:29:25.005167Z",
+  "draft_created_at": "2026-06-18T18:29:24.096920Z",
+  "lead_time": 7.795,
+  "import_id": null,
+  "last_action": null,
+  "bulk_created": false,
+  "project": 1,
+  "updated_by": 1,
+  "parent_prediction": 309,
+  "parent_annotation": null,
+  "last_created_by": null
+}

@@ -1,0 +1,171 @@
+{
+  "id": 214,
+  "result": [
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 67.2277,
+        "y": 50.196850000000005,
+        "width": 11.338,
+        "height": 18.8035,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Hog"
+        ]
+      },
+      "id": "DvID2IVDEX",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "prediction-changed"
+    },
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 2.9292107404393897,
+        "y": 56.8709881565862,
+        "width": 7.97396257119609,
+        "height": 13.452671548684497,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Piglet"
+        ]
+      },
+      "id": "OPlyk_MMcp",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "manual"
+    },
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 83.07567127746091,
+        "y": 56.87098815658612,
+        "width": 7.160292921074345,
+        "height": 5.93074767200063,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Piglet"
+        ]
+      },
+      "id": "TprpuO4U42",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "manual"
+    },
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 83.56387306753459,
+        "y": 62.36777868185516,
+        "width": 10.414971521562236,
+        "height": 8.679142934635209,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Piglet"
+        ]
+      },
+      "id": "fju90RVmnW",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "manual"
+    },
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 93.32790886899916,
+        "y": 53.97794051170776,
+        "width": 6.672091131000804,
+        "height": 9.40240484585478,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Piglet"
+        ]
+      },
+      "id": "oggNeeiKG2",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "manual"
+    },
+    {
+      "original_width": 640,
+      "original_height": 360,
+      "image_rotation": 0,
+      "value": {
+        "x": 87.87632221318145,
+        "y": 54.26724527619564,
+        "width": 5.858421480878761,
+        "height": 7.666576258927762,
+        "rotation": 0,
+        "rectanglelabels": [
+          "Piglet"
+        ]
+      },
+      "id": "ny0RwYSLqK",
+      "from_name": "label",
+      "to_name": "image",
+      "type": "rectanglelabels",
+      "origin": "manual"
+    }
+  ],
+  "created_username": " davisvercher@outlook.com, 1",
+  "created_ago": "6\u00a0hours, 59\u00a0minutes",
+  "completed_by": {
+    "id": 1,
+    "first_name": "",
+    "last_name": "",
+    "email": "davisvercher@outlook.com"
+  },
+  "task": {
+    "id": 3550,
+    "data": {
+      "image": "/data/local-files/?d=images%5C0287.jpg"
+    },
+    "meta": {},
+    "created_at": "2026-06-18T17:54:45.888103Z",
+    "updated_at": "2026-06-18T18:53:31.755853Z",
+    "is_labeled": true,
+    "allow_skip": true,
+    "overlap": 1,
+    "inner_id": 3550,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "precomputed_agreement": null,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 1,
+    "updated_by": 1,
+    "file_upload": 1,
+    "comment_authors": []
+  },
+  "was_cancelled": false,
+  "ground_truth": false,
+  "created_at": "2026-06-18T18:53:31.733228Z",
+  "updated_at": "2026-06-18T18:53:31.733228Z",
+  "draft_created_at": "2026-06-18T18:53:08.751492Z",
+  "lead_time": 30.267,
+  "import_id": null,
+  "last_action": null,
+  "bulk_created": false,
+  "project": 1,
+  "updated_by": 1,
+  "parent_prediction": 287,
+  "parent_annotation": null,
+  "last_created_by": null
+}
