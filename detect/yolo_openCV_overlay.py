@@ -16,10 +16,10 @@ from PyQt5.QtWidgets import QApplication, QWidget
 MODEL_PATH = r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\model\small_imageset_model\runs\detect\wildlife_yolo26n\weights\best.pt"
 
 CAPTURE_REGION = {
-    "top": 220,
-    "left": 20,
-    "width": 1800,
-    "height": 1050,
+    "top": 10,
+    "left": 10,
+    "width": 2540,
+    "height": 1420,
 }
 
 CONFIDENCE = 0.75
