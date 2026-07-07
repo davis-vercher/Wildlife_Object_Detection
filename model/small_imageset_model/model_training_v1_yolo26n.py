@@ -1,3 +1,9 @@
+"""
+Purpose:
+Train the base YOLO 26 model on the small wildlife imageset.
+"""
+
+
 from ultralytics import YOLO
 import torch
 

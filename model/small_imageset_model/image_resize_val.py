@@ -1,3 +1,11 @@
+"""
+Purpose:
+This file captures all the uniqe image sizes present in a single folder.
+
+Output:
+List of unique image sizes (i.e., 640 x 360) present for all images in a folder.
+"""
+
 from PIL import Image
 import os
 

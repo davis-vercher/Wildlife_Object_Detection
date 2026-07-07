@@ -1,3 +1,8 @@
+"""
+Purpose:
+Convert label files/folder structure from YOLO format to Label-Studio format.
+"""
+
 import os
 import json
 from PIL import Image

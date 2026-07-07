@@ -1,4 +1,8 @@
-# Below is for testing CUDA availabilty/integration with PyTorch for local machine
+"""
+Purpose:
+Used to test CUDA availabilty/integration with PyTorch for local machine
+"""
+
 import torch
 
 print(f"Is CUDA available?: {torch.cuda.is_available()}")

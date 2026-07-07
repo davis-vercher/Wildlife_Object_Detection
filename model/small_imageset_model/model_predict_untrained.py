@@ -1,3 +1,14 @@
+"""
+Purpose:
+Create bounding box annotations (with predictions) on the small wildlife imageset to make
+annotating in label-studio faster.
+
+Reason:
+Using the base YOLO 26 model (not trained on the data), predictions (bounding boxes, labels) are applied
+to all images in the small wildlife imageset. These predictions can be uploaded in label-studio and
+applied to the corresponding images.
+"""
+
 from ultralytics import YOLO
 from pathlib import Path
 

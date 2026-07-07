@@ -1,3 +1,11 @@
+"""
+Purpose:
+Rename all files in a single folder to a sequential numerical structure, keeping the file extension.
+
+Renaming Structure:
+0001.jpg, 0002.jpg, 0003.jpg ... NNNN.jpg (where NNNN is the final number in the sequence)
+"""
+
 import os
 
 source_folder = r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\small_imageset\deer"

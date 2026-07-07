@@ -1,3 +1,16 @@
+"""
+Purpose:
+This file converts the wildlife trail camera images from three specific sizes into one compatible size.
+
+Input Sizes Accepted:
+- 1920 x 1080
+- 2048 x 1536
+- 640 x 360
+
+Output Size:
+- 640 x 360
+"""
+
 from PIL import Image, ImageOps
 import os
 
