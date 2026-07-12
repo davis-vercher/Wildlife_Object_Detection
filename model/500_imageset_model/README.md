@@ -1,7 +1,7 @@
 # Small Imageset - First Model
 This folder houses all work done to get to the first trained YOLO 26 (nano) model on the small 500 images dataset.
 
-### Dataset
+# Dataset
 The "small_imageset" folder contains .jpg images and .txt class/bounding box labels for 500 images in three classes:
 - Coyote [27 images: {train: 20}, {val: 3}, {test: 4}]
 - White-Tailed Deer [229 images: {train: 210}, {val: 23}, {test: 28}]
@@ -12,7 +12,7 @@ Both the \images and \labels folders are split into \train, \val, and \test fold
 
 Each .jpg image corresonds to an identically named .txt label file (i.e., "0213.jpg" corresponds to "0213.txt").
 
-### Model
+# Model
 The model selected is a YOLO 26 nano model, and is trained in "model_training_v1_yolo26n.py".
 
 The YOLO model.train() parameters used are:
@@ -24,7 +24,7 @@ The YOLO model.train() parameters used are:
 The best model from this initial training run is stored in:
 ..\model\500_imageset_model\runs\detect\wildlife_yolo26n\weights\best.pt
 
-### Results
+# Results
 After one 100 epoch round of training the base yolo26n model:
 - Precision: 0.9266
 - Recall:    0.8465
@@ -36,11 +36,11 @@ Anecdotally, the model fails to detect coyote and piglet images, struggles to de
 When using 'yolo_openCV_overlay.py' (..\detect\.) to run the model on a live feed of the local screen, the model performs best for hog images (when using a browser to search for images of "wild hogs in the wild"), and performs poorly for the other classes.
 
 
-### Lessons Learned
-# Overall Thoughts
+# Lessons Learned
+## Overall Thoughts
 The imageset was too small to be meaningful, additional classes are needed, & improving the dataset needs to take priority over experimenting with different YOLO model sizes/configurations.
 
-# Detailed Problems
+## Detailed Problems
 The imageset has several key issues:
 - *Imbalance of Classes:* Smaller classes (coyote, piglet) were significantly smaller than the Hog and Deer classes. This can be addressed by gathering more instances of these classes and by using data augmentation on the existing images.
 - *Error in Class Splits:* The piglet set has zero instances in the validation split. This was caused by an oversight when creating the splits. Originally I intended there to not be a 'piglet' class seperate from 'Hog' but due to the moderate quantity of piglet instances in hog images (piglets are almost always with their adult mother/sounder in the wild, and therefore were in the images with adult hogs), I created a seperate piglet class. Also, piglets are visually distinct in many cases than adult hogs (presence of spots, striping, and lighter fur color).
@@ -52,7 +52,7 @@ The goal of this project needs to be refined:
 This refinement will narrow my next iteration of training to focus on creating a boundary specifically for hogs vs not hogs in images, rather than detecting each class successfully
 
 
-### Next Steps
+## Next Steps
 - 1) Create a larger dataset of ~1,250-1,500 images with the following classes:
     - Hog: 350
     - Piglet: 100
