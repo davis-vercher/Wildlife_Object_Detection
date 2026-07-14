@@ -25,11 +25,17 @@ The best model from this initial training run is stored in:
 ..\model\500_imageset_model\runs\detect\wildlife_yolo26n\weights\best.pt
 
 # Results
-After one 100 epoch round of training the base yolo26n model:
+After one 100 epoch round of training the base yolo26n model results are:
 - Precision: 0.9266
 - Recall:    0.8465
 - mAP50:     0.8625
 - mAP50-95:  0.6529
+
+And results of the best model on the test images are:
+- Precision: 0.9701
+- Recall:    0.6585
+- mAP50:     0.6681
+- mAP50-95:  0.4941
 
 Anecdotally, the model fails to detect coyote and piglet images, struggles to detect deer (and confuses deer with humans), and performs moderately at hog detection.
 
