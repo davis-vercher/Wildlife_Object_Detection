@@ -1,4 +1,4 @@
-path: C:/Users/Dave/Documents/robotics_project/Wildlife_Object_Detection/small_imageset
+path: C:/Users/Dave/Documents/robotics_project/Wildlife_Object_Detection/model/500_imageset_model/small_imageset
 
 train: images/train
 val: images/val
