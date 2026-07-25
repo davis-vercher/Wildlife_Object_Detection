@@ -15,8 +15,8 @@ from PIL import Image, ImageOps
 import os
 
 # Input and output folders
-input_folder = r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\small_imageset_500_deer_hog_coyote\deer"
-output_folder = r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\small_imageset_500_deer_hog_coyote\deer_resized"
+input_folder = r"C:[input actual path]\deer"
+output_folder = r"C:[input actual path]\deer_resized"
 os.makedirs(output_folder, exist_ok=True)
 
 skipped_files = []

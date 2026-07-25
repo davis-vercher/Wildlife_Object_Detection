@@ -17,7 +17,7 @@ Output
 
 import os
 
-labels_directory = r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\small_imageset\test_labels"
+labels_directory = r"C:[input actual path]\Wildlife_Object_Detection\[input actual path]"
 
 for filename in os.listdir(labels_directory):
     image_num = filename[-8:-4]

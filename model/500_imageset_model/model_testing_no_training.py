@@ -13,7 +13,7 @@ from ultralytics import YOLO
 model = YOLO("yolo26n.pt")
 
 # Perform object detection on an image
-results = model("C:/Users/Dave/Desktop/0037.jpg")
+results = model("C:/[input actual path]/<your_single_image>.jpg")
 
 # Visualize the results
 for result in results:

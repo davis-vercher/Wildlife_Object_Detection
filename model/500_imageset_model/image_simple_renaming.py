@@ -8,7 +8,7 @@ Renaming Structure:
 
 import os
 
-source_folder = r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\small_imageset\deer"
+source_folder = r"C:[input actual path]\Wildlife_Object_Detection\[input actual path]"
 
 files = [f for f in os.listdir(source_folder) if os.path.isfile(os.path.join(source_folder, f))]
 

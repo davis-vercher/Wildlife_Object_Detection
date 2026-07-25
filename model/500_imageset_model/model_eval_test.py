@@ -11,20 +11,20 @@ from ultralytics import YOLO
 import csv
 
 model = YOLO(
-    r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\model\500_imageset_model\runs\detect\wildlife_yolo26n\weights\best.pt"
+    r"C:[input actual path]\Wildlife_Object_Detection\model\500_imageset_model\runs\detect\wildlife_yolo26n\weights\best.pt"
 )
 
 metrics = model.val(
-    data=r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\model\500_imageset_model\small_imageset\wildlife.yaml",
+    data=r"C:[input actual path]\Wildlife_Object_Detection\model\500_imageset_model\small_imageset\wildlife.yaml",
     split="test",
     imgsz=640,
     batch=16,
     workers=0,
-    project=r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\model\500_imageset_model\runs\detect",
+    project=r"C:[input actual path]\Wildlife_Object_Detection\model\500_imageset_model\runs\detect",
     name="wildlife_yolo26n_test"
 )
 
-out_path = r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\model\500_imageset_model\runs\detect\wildlife_yolo26n_test\test_metrics.csv"
+out_path = r"C:[input actual path]\Wildlife_Object_Detection\model\500_imageset_model\runs\detect\wildlife_yolo26n_test\test_metrics.csv"
 
 with open(out_path, "w", newline="") as f:
     writer = csv.writer(f)

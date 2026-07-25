@@ -15,7 +15,7 @@ from pathlib import Path
 model = YOLO("untrained_yolo26n.pt")
 
 base_dir = Path(
-    r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\small_imageset"
+    r"C:[input actual path]\Wildlife_Object_Detection\[input actual path]"
 )
 
 folders = [
