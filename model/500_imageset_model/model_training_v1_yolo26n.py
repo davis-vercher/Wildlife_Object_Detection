@@ -25,7 +25,7 @@ print("=" * 50)
 model = YOLO("yolo26n.pt")
 
 model.train(
-    data=r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\model\small_imageset_model\small_imageset\wildlife.yaml",
+    data=r"C:[input actual path]\Wildlife_Object_Detection\model\500_imageset_model\small_imageset\wildlife.yaml",
     epochs=100,
     imgsz=640,
     batch=16,

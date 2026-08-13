@@ -7,7 +7,7 @@ import os
 import json
 from PIL import Image
 
-BASE_DIR = r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\small_imageset"
+BASE_DIR = r"C:[input actual path]\Wildlife_Object_Detection\model\500_imageset_model\small_imageset"
 IMAGES_DIR = os.path.join(BASE_DIR, "images")
 LABELS_DIR = os.path.join(BASE_DIR, "labels")
 OUTPUT_JSON = os.path.join(BASE_DIR, "predictions.json")

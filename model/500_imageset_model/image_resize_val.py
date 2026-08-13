@@ -9,7 +9,7 @@ List of unique image sizes (i.e., 640 x 360) present for all images in a folder.
 from PIL import Image
 import os
 
-input_folder = r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\small_imageset_500_deer_hog_coyote\coyote_resized"
+input_folder = r"C:[input actual path]"
 
 unique_sizes = set()
 

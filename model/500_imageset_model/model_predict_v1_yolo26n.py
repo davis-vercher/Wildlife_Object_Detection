@@ -9,9 +9,9 @@ on the local machine.
 
 from ultralytics import YOLO
 
-model = YOLO(r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\runs\detect\wildlife_yolo26n\weights\best.pt")
+model = YOLO(r"C:[input actual path]\Wildlife_Object_Detection\runs\detect\wildlife_yolo26n\weights\best.pt")
 
-results = model("C:/Users/Dave/Desktop/pig.jpg")
+results = model("C:/[input actual path]/<your_single_image>.jpg")
 
 for result in results:
     result.show()

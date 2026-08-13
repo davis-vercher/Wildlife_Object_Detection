@@ -13,7 +13,7 @@ from PyQt5.QtGui import QPainter, QPen, QColor, QFont
 from PyQt5.QtWidgets import QApplication, QWidget
 
 
-MODEL_PATH = r"C:\Users\Dave\Documents\robotics_project\Wildlife_Object_Detection\model\small_imageset_model\runs\detect\wildlife_yolo26n\weights\best.pt"
+MODEL_PATH = r"C:[input actual path]\Wildlife_Object_Detection\model\small_imageset_model\runs\detect\wildlife_yolo26n\weights\best.pt"
 
 CAPTURE_REGION = {
     "top": 10,
