@@ -30,6 +30,7 @@ class JPEGSorterApp:
 
         self.source_var = tk.StringVar()
         self.destination_vars = {str(key): tk.StringVar() for key in range(10)}
+        self.name_vars = {str(key): tk.StringVar() for key in range(10)}
         self.status_var = tk.StringVar(value="Configure folders, then select Start.")
         self.filename_var = tk.StringVar(value="No image loaded")
         self.progress_var = tk.StringVar(value="")
@@ -95,18 +96,24 @@ class JPEGSorterApp:
 
         ttk.Label(
             self.config_frame,
-            text="Assign destination folders (leave unused keys blank):",
+            text="Name each class and assign its destination folder (leave unused keys blank):",
             style="Heading.TLabel",
         ).grid(row=2, column=0, sticky="w", pady=(0, 7))
 
         mappings = ttk.Frame(self.config_frame)
         mappings.grid(row=3, column=0, sticky="ew")
-        mappings.columnconfigure(0, weight=1)
-        mappings.columnconfigure(1, weight=1)
+        mappings.columnconfigure(2, weight=1)
+        ttk.Label(mappings, text="Key", style="Heading.TLabel").grid(
+            row=0, column=0, padx=(0, 8)
+        )
+        ttk.Label(mappings, text="Class name", style="Heading.TLabel").grid(
+            row=0, column=1, sticky="w", padx=(0, 8)
+        )
+        ttk.Label(mappings, text="Destination folder", style="Heading.TLabel").grid(
+            row=0, column=2, sticky="w", padx=(0, 8)
+        )
         for key in range(10):
-            column = 0 if key < 5 else 1
-            row = key if key < 5 else key - 5
-            self._build_mapping_row(mappings, str(key), row, column)
+            self._build_mapping_row(mappings, str(key), key + 1)
 
         actions = ttk.Frame(self.config_frame)
         actions.grid(row=4, column=0, sticky="ew", pady=(14, 0))
@@ -158,11 +165,14 @@ class JPEGSorterApp:
         controls.grid(row=2, column=0, sticky="ew", pady=(9, 0))
         controls.columnconfigure(0, weight=1)
 
+        ttk.Label(controls, text="Number key legend:", style="Heading.TLabel").grid(
+            row=0, column=0, sticky="w", pady=(0, 3)
+        )
         self.key_buttons = ttk.Frame(controls)
-        self.key_buttons.grid(row=0, column=0, sticky="w")
+        self.key_buttons.grid(row=1, column=0, sticky="w")
 
         utility_buttons = ttk.Frame(controls)
-        utility_buttons.grid(row=0, column=1, sticky="e")
+        utility_buttons.grid(row=1, column=1, sticky="e")
         self.undo_button = ttk.Button(
             utility_buttons, text="Undo last move", command=self._undo, state="disabled"
         )
@@ -178,33 +188,30 @@ class JPEGSorterApp:
         )
         self._refresh_key_buttons()
 
-    def _build_mapping_row(
-        self, parent: ttk.Frame, key: str, row: int, column: int
-    ) -> None:
-        wrapper = ttk.Frame(parent, padding=(0, 2))
-        wrapper.grid(
-            row=row,
-            column=column,
-            sticky="ew",
-            padx=(0, 12) if column == 0 else (12, 0),
+    def _build_mapping_row(self, parent: ttk.Frame, key: str, row: int) -> None:
+        ttk.Label(parent, text=key, width=3, anchor="center", style="Heading.TLabel").grid(
+            row=row, column=0, padx=(0, 8), pady=2
         )
-        wrapper.columnconfigure(1, weight=1)
-        ttk.Label(wrapper, text=key, width=2, anchor="center", style="Heading.TLabel").grid(
-            row=0, column=0, padx=(0, 5)
+        ttk.Entry(parent, textvariable=self.name_vars[key], width=22).grid(
+            row=row, column=1, sticky="ew", padx=(0, 8), pady=2
         )
-        ttk.Entry(wrapper, textvariable=self.destination_vars[key]).grid(
-            row=0, column=1, sticky="ew", padx=(0, 5)
+        ttk.Entry(parent, textvariable=self.destination_vars[key]).grid(
+            row=row, column=2, sticky="ew", padx=(0, 8), pady=2
         )
         ttk.Button(
-            wrapper,
+            parent,
             text="Browse...",
             command=lambda selected_key=key: self._choose_destination(selected_key),
-        ).grid(row=0, column=2, padx=(0, 4))
+        ).grid(row=row, column=3, padx=(0, 4), pady=2)
         ttk.Button(
-            wrapper,
+            parent,
             text="Clear",
-            command=lambda selected_key=key: self.destination_vars[selected_key].set(""),
-        ).grid(row=0, column=3)
+            command=lambda selected_key=key: self._clear_mapping(selected_key),
+        ).grid(row=row, column=4, pady=2)
+
+    def _clear_mapping(self, key: str) -> None:
+        self.name_vars[key].set("")
+        self.destination_vars[key].set("")
 
     def _choose_source(self) -> None:
         selected = filedialog.askdirectory(
@@ -443,10 +450,10 @@ class JPEGSorterApp:
             child.destroy()
         mapping = self._mapping()
         for index, (key, folder) in enumerate(mapping.items()):
-            folder_label = str(folder.name or folder)
-            if len(folder_label) > 16:
-                folder_label = f"{folder_label[:13]}..."
-            label = f"{key}  {folder_label}"
+            class_name = self.name_vars[key].get().strip() or str(folder.name or folder)
+            if len(class_name) > 22:
+                class_name = f"{class_name[:19]}..."
+            label = f"{key}:  {class_name}"
             button = ttk.Button(
                 self.key_buttons,
                 text=label,
@@ -464,8 +471,14 @@ class JPEGSorterApp:
             data = json.loads(CONFIG_FILE.read_text(encoding="utf-8"))
             self.source_var.set(str(data.get("source", "")))
             destinations = data.get("destinations", {})
+            names = data.get("names", {})
+            if not isinstance(destinations, dict):
+                destinations = {}
+            if not isinstance(names, dict):
+                names = {}
             for key, variable in self.destination_vars.items():
                 variable.set(str(destinations.get(key, "")))
+                self.name_vars[key].set(str(names.get(key, "")))
             self._refresh_key_buttons()
         except (OSError, ValueError, TypeError):
             # A damaged preference file should never prevent the app from opening.
@@ -478,6 +491,11 @@ class JPEGSorterApp:
                 key: variable.get().strip()
                 for key, variable in self.destination_vars.items()
                 if variable.get().strip()
+            },
+            "names": {
+                key: self.name_vars[key].get().strip()
+                for key, variable in self.destination_vars.items()
+                if variable.get().strip() and self.name_vars[key].get().strip()
             },
         }
         try:

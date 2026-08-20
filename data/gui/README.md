@@ -24,11 +24,12 @@ and resize local JPEG images inside the GUI.
 ## Use
 
 1. Select the source folder containing `.jpg` or `.jpeg` files.
-2. Assign one or more destination folders to number keys. Each folder may be
-   assigned to only one key.
+2. Give each class a name and assign its destination folder to a number key.
+   Each folder may be assigned to only one key.
 3. Select **Start**.
 4. Press an assigned number key, or click its on-screen button, to move the
-   displayed image into that destination.
+   displayed image into that destination. The number-key legend remains visible
+   below the image as a reminder of every assigned class name.
 5. Select **Undo last move** to restore only the most recently moved image to
    the source folder. The restored image is displayed again immediately.
 
