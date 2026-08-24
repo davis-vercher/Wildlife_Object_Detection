@@ -27,6 +27,7 @@ from project_services import (
     create_project,
     delete_project,
     move_library,
+    recover_library,
     remove_stale_project,
     rename_project,
     scan_project,
@@ -186,8 +187,9 @@ class OutdoorVisionApp:
         card.place(relx=0.5, rely=0.47, anchor="center", width=680, height=420)
         title = "Reconnect your project library" if recovery else "Welcome to Outdoor Vision CV"
         description = (
-            "The saved project library is missing or unavailable. Choose the parent folder that currently contains "
-            f"{LIBRARY_NAME}. Existing project records will be preserved."
+            "The saved project library is missing or unavailable. Choose the parent folder where "
+            f"{LIBRARY_NAME} should live. If it was deleted, the app will recreate an empty library. "
+            "Existing project records will be preserved as missing projects so you can remove them safely."
             if recovery
             else "Choose an accessible location for your project library. The app will create one folder named "
             f"{LIBRARY_NAME} and remember it for future launches."
@@ -215,28 +217,33 @@ class OutdoorVisionApp:
                 messagebox.showerror(APP_TITLE, "Choose a parent folder first.", parent=self.root)
                 return
             parent = Path(parent_var.get())
+            previous_library_path = self.state.library_path
+            previous_project_paths = {
+                project.project_id: project.path for project in self.state.projects
+            }
+            created_library = False
             try:
                 if recovery:
-                    library = parent / LIBRARY_NAME
-                    if not library.is_dir():
-                        raise ValidationError(
-                            f"The selected location does not contain {LIBRARY_NAME}."
-                        )
+                    created_library = not (parent / LIBRARY_NAME).exists()
+                    library = recover_library(parent)
                     self.state.library_path = str(library.resolve())
                     for project in self.state.projects:
                         project.path = str((library / project.name).resolve())
                 else:
                     library = create_library(parent)
+                    created_library = True
                     self.state.library_path = str(library)
                 try:
                     self.store.save(self.state)
                 except Exception:
-                    if not recovery and library.is_dir():
+                    if created_library and library.is_dir():
                         try:
                             library.rmdir()
                         except OSError:
                             pass
-                    self.state.library_path = ""
+                    self.state.library_path = previous_library_path
+                    for project in self.state.projects:
+                        project.path = previous_project_paths[project.project_id]
                     raise
             except Exception as error:
                 messagebox.showerror(APP_TITLE, str(error), parent=self.root)

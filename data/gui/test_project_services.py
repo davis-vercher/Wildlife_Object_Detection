@@ -15,6 +15,7 @@ from project_services import (
     create_project,
     delete_project,
     move_library,
+    recover_library,
     remove_stale_project,
     rename_project,
     scan_project,
@@ -43,6 +44,31 @@ class ProjectServicesTests(unittest.TestCase):
     def test_create_library_refuses_an_existing_destination(self) -> None:
         with self.assertRaises(ValidationError):
             create_library(self.root)
+
+    def test_recovery_recreates_a_library_deleted_outside_the_app(self) -> None:
+        self.library.rmdir()
+        recovered = recover_library(self.root)
+        self.assertEqual(recovered, self.root / LIBRARY_NAME)
+        self.assertTrue(recovered.is_dir())
+
+    def test_recreated_library_can_create_new_projects_and_preserves_stale_records(self) -> None:
+        old_project = create_project(self.state, self.store, "Deleted Outside App")
+        old_project.folder.rmdir()
+        self.library.rmdir()
+
+        recovered = recover_library(self.root)
+        self.state.library_path = str(recovered)
+        for project in self.state.projects:
+            project.path = str(recovered / project.name)
+        self.store.save(self.state)
+
+        new_project = create_project(self.state, self.store, "New Project")
+        self.assertTrue(new_project.folder.is_dir())
+        self.assertFalse(old_project.folder.exists())
+        self.assertEqual(len(self.store.load().projects), 2)
+
+    def test_recovery_accepts_an_existing_library(self) -> None:
+        self.assertEqual(recover_library(self.root), self.library)
 
     def test_windows_name_rules_and_case_insensitive_duplicates(self) -> None:
         valid = "Hog Detector"

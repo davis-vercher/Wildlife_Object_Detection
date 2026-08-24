@@ -112,6 +112,27 @@ def create_library(parent: Path) -> Path:
     return target.resolve()
 
 
+def recover_library(parent: Path) -> Path:
+    """Return the configured library, recreating it when it was deleted externally."""
+
+    parent = parent.expanduser().resolve()
+    if not parent.is_dir():
+        raise ValidationError(f"The selected parent folder does not exist:\n{parent}")
+    target = parent / LIBRARY_NAME
+    if target.exists() and not target.is_dir():
+        raise ValidationError(
+            f"A file named {LIBRARY_NAME} already exists at the selected location."
+        )
+    if not target.exists():
+        try:
+            target.mkdir()
+        except OSError as error:
+            raise OSError(
+                f"Could not recreate the project library at:\n{target}\n\n{error}"
+            ) from error
+    return target.resolve()
+
+
 def create_project(state: AppState, store: StateStore, name: str) -> ProjectRecord:
     library = Path(state.library_path).resolve()
     if not library.is_dir():
